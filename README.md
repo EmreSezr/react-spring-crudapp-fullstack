@@ -10,4 +10,16 @@
 
 # Screenshots
 
+* ### Home Page
+
+![Home.png](ScreenShots%2FHome.png)
+* ### Add User Page
+
+![AddUser.png](ScreenShots%2FAddUser.png)
+
+* ### View User Page
+
+![ViewUser.png](ScreenShots%2FViewUser.png)
+
+
 

@@ -1,5 +1,6 @@
 package com.emresezer.reactspringfullstack.controller;
 
+import com.emresezer.reactspringfullstack.exception.UserNotFoundException;
 import com.emresezer.reactspringfullstack.model.User;
 import com.emresezer.reactspringfullstack.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,10 @@ public class UserController {
         return userRepository.findAll();
     }
 
-
+    @GetMapping("/user/{id}")
+    User getUserById(@PathVariable Long id){
+        return userRepository.findById(id)
+                .orElseThrow(()->new UserNotFoundException(id));
+    }
 
 }

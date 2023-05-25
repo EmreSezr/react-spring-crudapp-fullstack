@@ -7,6 +7,10 @@
 # Project
 * In this project we can dynamically add/edit & delete user from the Mysql Database.  
 * You can reach Front-end source from  [here(click)](https://github.com/EmreSezr/react-spring-fullstack/tree/master/react-spring-fullstack-frontendCodes)
+* Use "npm start" in this folder to open front-end side
+
+# Database
+* You can check application.properties file and you can configure it according to your mysql settings
 
 
 # Screenshots

@@ -10,7 +10,8 @@
 * Use "npm start" in this folder to open front-end side
 
 # Database
-* You can check application.properties file and you can configure it according to your mysql settings
+* You can check application.properties [here(click)](https://github.com/EmreSezr/react-spring-crudapp-fullstack/blob/master/src/main/resources/application.properties)  file and you can configure it for yourself
+
 
 
 # Screenshots

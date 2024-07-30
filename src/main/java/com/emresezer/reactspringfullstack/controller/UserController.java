@@ -15,7 +15,7 @@ public class UserController {
     private UserRepository userRepository;
 
     @PostMapping("/user")
-   User newUser(@RequestBody User newUser) {
+    User newUser(@RequestBody User newUser) {
         return userRepository.save(newUser);
     }
 
@@ -38,15 +38,15 @@ public class UserController {
                     user.setName(newUser.getName());
                     user.setEmail(newUser.getEmail());
                     return userRepository.save(user);
-                }).orElseThrow(()->new UserNotFoundException(id));
+                }).orElseThrow(() -> new UserNotFoundException(id));
     }
 
     @DeleteMapping("/user/{id}")
-    String deleteUser(@PathVariable Long id){
-        if(!userRepository.existsById(id)){
+    String deleteUser(@PathVariable Long id) {
+        if (!userRepository.existsById(id)) {
             throw new UserNotFoundException(id);
         }
         userRepository.deleteById(id);
-        return "Kullanıcı id'si: "+id+" olan silindi!";
+        return "Kullanıcı id'si: " + id + " olan silindi!";
     }
 }

@@ -77,7 +77,7 @@ export default function AddUser() {
               Submit
             </button>
 
-            <Link className="btn btn-danger" to="/">
+            <Link className="btn btn-danger" to="/users">
               Cancel
             </Link>
           </form>

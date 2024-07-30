@@ -35,27 +35,31 @@ export default function Home() {
             </tr>
           </thead>
           <tbody>
-            {users.map((users, index) => (
-              <tr>
-                <th scope="row" key={index}>
-                  {index + 1}
-                </th>
-                <td>{users.name}</td>
-                <td>{users.userName}</td>
-                <td>{users.email}</td>
+            {users.map((user, index) => (
+              <tr key={user.id}>
+                <th scope="row">{index + 1}</th>
+                <td>{user.name}</td>
+                <td>{user.userName}</td>
+                <td>{user.email}</td>
                 <td>
                   <Link
                     className="btn btn-primary mx-2"
-                    to={`/viewUser/${users.id}`}
-                  >View</Link>
+                    to={`/viewUser/${user.id}`}
+                  >
+                    View
+                  </Link>
                   <Link
                     className="btn btn-outline-primary mx-2"
-                    to={`/editUser/${users.id}`}
-                  >Edit</Link>
+                    to={`/editUser/${user.id}`}
+                  >
+                    Edit
+                  </Link>
                   <button
                     className="btn btn-danger mx-2"
-                    onClick={() => deleteUser(users.id)}
-                  >Delete</button>
+                    onClick={() => deleteUser(user.id)}
+                  >
+                    Delete
+                  </button>
                 </td>
               </tr>
             ))}
